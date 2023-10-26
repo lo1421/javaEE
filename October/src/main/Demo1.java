@@ -10,9 +10,7 @@ public class Demo1 {
 
     public static final long COUNT = 100_0000_0000L;
     public static void main(String[] args) {
-
-
-       serial();
+       //serial();
       concurrency();
     }
 
