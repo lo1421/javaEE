@@ -1,5 +1,9 @@
 package src.main;
 
+/**
+ * 测试创建线程的方式三 使用匿名内部类实现 Thread 抽象类的对象
+ * 然后调用start()方法
+ */
 public class Demo4 {
 
     public static void main(String[] args) {
