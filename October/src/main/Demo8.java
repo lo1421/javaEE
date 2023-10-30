@@ -18,6 +18,12 @@ package src.main;
 4.实现Runnable接口,使用匿名内部类
 5.lambda表达式
  */
+
+/**
+ * 我们给线程起的名字,可以通过第三方的程序比如 JDK 的 bin目录下的 jconsole.exe 就可以显式的看见我们给线程起的名字
+ * 这样做的目的就是我们可以非常便捷的控制线程
+ * 程序员工作的很大部分就是在命名
+ */
 public class Demo8 {
     public static void main(String[] args){
     }
@@ -28,7 +34,9 @@ public class Demo8 {
      * 创建线程对象
      */
     public static void creatThread1(){
-        Thread thread = new Thread();
+        Thread thread = new Thread(()->{
+            //线程具体的需要做的事
+        });
     }
 
     /**
@@ -64,7 +72,7 @@ public class Demo8 {
             public void run() {
                 System.out.println("线程!");
             }
-        },"这是线程的名字");
+        },"这是线程的名字");//这个名字是允许重复的,取这个名字是为了方便之后调试
     }
 
     /**
@@ -73,6 +81,6 @@ public class Demo8 {
      * 线程可以用来分组管理,分好组的线程就称为线程组
      */
     public static void createThread5(){
-       // Thread Thread  = new Thread(ThreadGroup group,Runnable target);
+       // Thread thread  = new Thread(ThreadGroup group,Runnable target);
     }
 }
