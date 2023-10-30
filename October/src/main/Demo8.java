@@ -9,8 +9,70 @@ package src.main;
  * 进程是资源分配的基本单位,线程是调度执行的基本单位
  * 多线程程序,能够有效的提高程序运行的效率(能够更加充分的利用多核CPU)
  */
+
+/*
+创建线程的方法
+1.继承Thread类,实现run方法,调用start方法
+2.实现Runnable接口,重写run方法,调用start方法
+3.继承Thread类,使用匿名内部类
+4.实现Runnable接口,使用匿名内部类
+5.lambda表达式
+ */
 public class Demo8 {
     public static void main(String[] args){
+    }
 
+    /**
+     * 创建线程的方法1
+     * 不带参数
+     * 创建线程对象
+     */
+    public static void creatThread1(){
+        Thread thread = new Thread();
+    }
+
+    /**
+     * 创建线程的方法2
+     * 带一个参数
+     * 带一个Runnable实现类对象的参数
+     */
+    public static void createThread2(){
+        Thread thread = new Thread(new Runnable() {
+            public void run() {
+                System.out.println("线程!");
+            }
+        });
+    }
+
+    /**
+     * 创建线程的方法3
+     * 带一个参数
+     * String类型的参数,创建线程对象的同时用来给线程命名的
+     */
+    public static  void createThread3(){
+        Thread thread = new Thread("ThreadName!");
+    }
+
+    /**
+     * 创建线程的方法4
+     * 带两个参数
+     * 使用Runnable皆苦对象创建线程对象,并命名
+     */
+    public static void createThread4(){
+        Thread thread = new Thread(new Runnable(){
+            @Override
+            public void run() {
+                System.out.println("线程!");
+            }
+        },"这是线程的名字");
+    }
+
+    /**
+     * 创建线程的方法5
+     * 带两个参数[了解]
+     * 线程可以用来分组管理,分好组的线程就称为线程组
+     */
+    public static void createThread5(){
+       // Thread Thread  = new Thread(ThreadGroup group,Runnable target);
     }
 }
