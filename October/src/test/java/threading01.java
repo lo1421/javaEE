@@ -8,9 +8,12 @@ package src.test.java;
 
 class Counter{
     public int count ;
-    public void count(){
-        count++;
+    public synchronized void count(){
+        synchronized (this){
+            count++;
+        }
     }
+
 }
 public class threading01{
     //创建一个Counter类型的的静态的对象
