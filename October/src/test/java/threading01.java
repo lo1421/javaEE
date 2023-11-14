@@ -8,7 +8,7 @@ package src.test.java;
 
 class Counter{
     public int count ;
-    public synchronized void count(){
+    public synchronized void increase(){
         synchronized (this){
             count++;
         }
@@ -24,13 +24,13 @@ public class threading01{
     public static void main(String[] args) throws InterruptedException {
        Thread t1 = new Thread(()->{
            for (int i = 0; i < 50000; i++) {
-               counter.count();
+               counter.increase();
            }
        });
 
        Thread t2 = new Thread(()->{
            for (int i = 0; i < 50000; i++) {
-               counter.count();
+               counter.increase();
            }
        });
 
