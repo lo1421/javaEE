@@ -9,7 +9,7 @@ package src.test.java;
 class Counter{
     public int count ;
     public synchronized void increase(){
-        synchronized (this){
+        synchronized (Counter.class){
             count++;
         }
     }
