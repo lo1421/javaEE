@@ -2,45 +2,43 @@ package src.test.java;
 
 public class ThreadedBinaryTreeTest {
     public static void main(String[] args) {
-        ThreadedBinaryTree<String> tree = new ThreadedBinaryTree<>();
+        ThreadedBinaryTree<Integer> tree = new ThreadedBinaryTree<>();
 
         // 创建节点
-        ThreadedBinaryTree.BinaryTreeNode<String> r = new ThreadedBinaryTree.BinaryTreeNode<>("r");
-        //添加r根节点的左子结点a
-        ThreadedBinaryTree.BinaryTreeNode<String> a = new ThreadedBinaryTree.BinaryTreeNode<>("a");
-        //添加r根节点的右子结点b
-        ThreadedBinaryTree.BinaryTreeNode<String> b = new ThreadedBinaryTree.BinaryTreeNode<>("b");
-        //添加a节点的左子结点c
-        ThreadedBinaryTree.BinaryTreeNode<String> c = new ThreadedBinaryTree.BinaryTreeNode<>("c");
-        //添加a节点的右子结点d
-        ThreadedBinaryTree.BinaryTreeNode<String> d = new ThreadedBinaryTree.BinaryTreeNode<>("d");
-        //添加b节点的左子结点e
-        ThreadedBinaryTree.BinaryTreeNode<String> e = new ThreadedBinaryTree.BinaryTreeNode<>("e");
-        //添加b节点的右子结点f
-        ThreadedBinaryTree.BinaryTreeNode<String> f = new ThreadedBinaryTree.BinaryTreeNode<>("f");
-        //添加c节点的左子结点g
-        ThreadedBinaryTree.BinaryTreeNode<String> g = new ThreadedBinaryTree.BinaryTreeNode<>("g");
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node6 = new ThreadedBinaryTree.BinaryTreeNode<>(6);
+        //添加r根节点的左子结点node3
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node3 = new ThreadedBinaryTree.BinaryTreeNode<>(3);
+        //添加r根节点的右子结点node7
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node7 = new ThreadedBinaryTree.BinaryTreeNode<>(7);
+        //添加a节点的左子结点node1
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node1 = new ThreadedBinaryTree.BinaryTreeNode<>(1);
+        //添加a节点的右子结点node4
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node4 = new ThreadedBinaryTree.BinaryTreeNode<>(4);
+        //添加b节点的右子结点node2
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node2 = new ThreadedBinaryTree.BinaryTreeNode<>(2);
+        //添加c节点的左子结点node5
+        ThreadedBinaryTree.BinaryTreeNode<Integer> node5 = new ThreadedBinaryTree.BinaryTreeNode<>(5);
+
 
 
 
         // 插入节点
-        tree.insertNode(null, r, true);
-        tree.insertNode(r, a,true);
-        tree.insertNode(r, b, false);
-        tree.insertNode(a, c, true);
-        tree.insertNode(a, d, false);
-        tree.insertNode(c, null,true);
-        tree.insertNode(c, f,false);
-        tree.insertNode(d, null, true);
-        tree.insertNode(d, g, false);
-        tree.insertNode(f, null, false);
-        tree.insertNode(f, null, true);
-        tree.insertNode(g, null, true);
-        tree.insertNode(g, null, false);
-        tree.insertNode(b, null, true);
-        tree.insertNode(b, e, false);
-        tree.insertNode(e, null, true);
-        tree.insertNode(e, null, false);
+        tree.insertNode(null, node6, true);
+        tree.insertNode(node6, node3,true);
+        tree.insertNode(node6, node7, false);
+        tree.insertNode(node3, node1, true);
+        tree.insertNode(node3, node4, false);
+        tree.insertNode(node1, null,true);
+        tree.insertNode(node1, node2,false);
+        tree.insertNode(node4, null, true);
+        tree.insertNode(node4, node5, false);
+        tree.insertNode(node2, null, false);
+        tree.insertNode(node2, null, true);
+        tree.insertNode(node5, null, true);
+        tree.insertNode(node5, null, false);
+        tree.insertNode(node7, null, true);
+
+
 
 
 
