@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * 在这个程序中我们就要进行修改操作,看看在多线程的条件下,是否会因为内存可见性而发生线程不安全!
+ * 如果在这个线程中加入volatile关键字的话,那么我们的线程就不会因为编译器的优化机制
+ * volatile是拿来修饰变量的,volatile修饰的变量是不会被编译器优化的
  */
 public class Threading04 {
 
@@ -45,8 +47,6 @@ public class Threading04 {
 
             System.out.println("thread2 线程结束!");
         });
-
-
 
         thread2.start();
     }
