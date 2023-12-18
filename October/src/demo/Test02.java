@@ -7,7 +7,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Test02 {
     public static void main(String[] args){
-      //  ThreadPoolExecutor  poolExecutor = Executors.newCachedThreadPool();
         ExecutorService poor = Executors.newCachedThreadPool();
+
     }
 }
+
